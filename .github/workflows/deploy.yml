@@ -1,8 +1,7 @@
 name: Deploy website
+run-name: Deploy from ${{ github.ref_name }}
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,28 +16,46 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout selected branch
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
 
-      - uses: actions/setup-node@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
 
-      - uses: actions/configure-pages@v5
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create environment file
+        env:
+          ENV_FILE: ${{ secrets.ENV }}
+        run: |
+          if [ -z "$ENV_FILE" ]; then
+            echo "::error::Repository secret ENV is missing or empty."
+            exit 1
+          fi
+
+          umask 077
+          printf '%s\n' "$ENV_FILE" > .env.production
 
       - name: Build website
         run: npm run build
-        env:
-          SITE_INDEXABLE: "true"
 
-      - uses: actions/upload-pages-artifact@v4
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
         with:
           path: out
 
