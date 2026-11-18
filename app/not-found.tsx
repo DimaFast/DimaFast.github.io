@@ -1,5 +1,5 @@
-import { Button, Heading } from "@/components/ui";
-import styles from "./not-found.module.css";
+import { Button, Heading } from '@/components/ui'
+import styles from './not-found.module.css'
 
 export default function NotFound() {
   return (
@@ -7,8 +7,13 @@ export default function NotFound() {
       <div className="wrap inner-content">
         <Heading level={1}>Сторінку не знайдено</Heading>
         <p>Перейдіть до списку лікарів або поверніться на головну.</p>
-        <div className="button-row"><Button href="/doctors/">Наші лікарі</Button><Button href="/" variant="green">На головну</Button></div>
+        <div className="button-row">
+          <Button href="/doctors/">Наші лікарі</Button>
+          <Button href="/" variant="green">
+            На головну
+          </Button>
+        </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import { Blog } from "@/components/blog";
-import { pageMetadata } from "@/lib/seo";
+import { Blog } from '@/components/blog'
+import { pageMetadata } from '@/lib/seo'
 
-const slug = "blog";
+const slug = 'blog'
 
-export const metadata = pageMetadata(slug);
+export const metadata = pageMetadata(slug)
 
 export default function Page() {
-  return <Blog standalone />;
+  return <Blog standalone />
 }

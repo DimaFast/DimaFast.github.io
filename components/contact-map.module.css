@@ -1,4 +1,23 @@
-.map { height: 255px; background: var(--sand); }
-.mapActions { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px; height: 100%; padding: 18px; }
-.mapActions a { text-decoration: underline; text-underline-offset: 4px; }
-.map iframe { display: block; border: 0; width: 100%; height: 100%; }
+.map {
+  height: 255px;
+  background: var(--sand);
+}
+.mapActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  height: 100%;
+  padding: 18px;
+}
+.mapActions a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.map iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}

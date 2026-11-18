@@ -1,6 +1,8 @@
-import { Carousel } from "@/components/carousel";
-import { Services } from "@/components/services";
+import { Carousel } from '@/components/carousel'
+import { Services } from '@/components/services'
 
 export function HomeServices() {
-  return <Services carousel={(cards) => <Carousel label="Послуги медичного центру">{cards}</Carousel>} />;
+  return (
+    <Services carousel={(cards) => <Carousel label="Послуги медичного центру">{cards}</Carousel>} />
+  )
 }

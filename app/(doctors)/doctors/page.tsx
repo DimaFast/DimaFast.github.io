@@ -1,11 +1,16 @@
-import { Consultation } from "@/components/consultation";
-import { Doctors } from "@/components/doctors";
-import { pageMetadata } from "@/lib/seo";
+import { Consultation } from '@/components/consultation'
+import { Doctors } from '@/components/doctors'
+import { pageMetadata } from '@/lib/seo'
 
-const slug = "doctors";
+const slug = 'doctors'
 
-export const metadata = pageMetadata(slug);
+export const metadata = pageMetadata(slug)
 
 export default function Page() {
-  return <><Doctors standalone /><Consultation /></>;
+  return (
+    <>
+      <Doctors standalone />
+      <Consultation />
+    </>
+  )
 }

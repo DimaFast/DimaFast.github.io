@@ -1,71 +1,290 @@
-.hero { min-height: 845px; background: url("/media/hero-background.webp") center top / cover no-repeat; }
-.heroGrid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
-.heroCopy { padding-top: 182px; padding-bottom: 106px; }
-.heroWordmark { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 30px; min-height: 62px; }
-.heroWordmark strong { color: #a96419; font: 700 40px/.95 var(--serif); text-transform: uppercase; letter-spacing: .035em; }
-.heroWordmark span { color: var(--green); font-size: 21px; font-weight: 700; letter-spacing: .035em; text-transform: uppercase; }
-.hero h1 { max-width: 535px; font-size: clamp(36px, 3.16vw, 46px); line-height: .83; text-transform: uppercase; }
-.heroDescription { font-size: 18px; line-height: 1.4; }
-.heroActions { display: flex; align-items: center; gap: clamp(16px, 6.5vw, 86px); margin-top: 52px; }
-.heroActions :global(.button) { min-height: 64px; font-size: 15px; padding-inline: 39px; min-width: 288px; }
-.heroActions :global(.phone-button) { min-width: 104px; padding-inline: 25px; }
-.heroCollage { position: relative; margin: 127px 0 0 4px; width: min(100%, 524px); aspect-ratio: 524 / 660; }
-.collagePhoto { position: absolute; background: #e6e6e2; border: 5px solid white; box-shadow: 1px 5px 13px #1227203d; overflow: hidden; }
-.collagePhoto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.collageAnastasiia { left: 4%; top: 2%; width: 47%; height: 49%; transform: rotate(-7deg); }
-.collageAnastasiia img { object-position: center 25%; }
-.collageDiagnostics { right: 3%; top: 1%; width: 42%; height: 39%; transform: rotate(6deg); }
-.collageDiagnostics img { object-position: 67% center; }
-.collageTeam { left: 27%; top: 24%; width: 56%; height: 42%; z-index: 1; }
-.collageTeam img { width: 50% !important; }
-.collageTeam img + img { left: 50% !important; }
-.collageProcedure { left: 4%; bottom: 5%; width: 47%; height: 41%; transform: rotate(-4deg); z-index: 2; }
-.collageProcedure img { object-position: 66% center; }
-.collageTetiana { right: 0; bottom: 1%; width: 43%; height: 41%; z-index: 2; }
-.collageTetiana img { object-position: center 20%; }
+.hero {
+  min-height: 845px;
+  background: url('/media/hero-background.webp') center top / cover no-repeat;
+}
+.heroGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  align-items: start;
+}
+.heroCopy {
+  padding-top: 182px;
+  padding-bottom: 106px;
+}
+.heroWordmark {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 30px;
+  min-height: 62px;
+}
+.heroWordmark strong {
+  color: #a96419;
+  font: 700 40px/0.95 var(--serif);
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+.heroWordmark span {
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  max-width: 535px;
+  font-size: clamp(36px, 3.16vw, 46px);
+  line-height: 0.83;
+  text-transform: uppercase;
+}
+.heroDescription {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 6.5vw, 86px);
+  margin-top: 52px;
+}
+.heroActions :global(.button) {
+  min-height: 64px;
+  font-size: 15px;
+  padding-inline: 39px;
+  min-width: 288px;
+}
+.heroActions :global(.phone-button) {
+  min-width: 104px;
+  padding-inline: 25px;
+}
+.heroCollage {
+  position: relative;
+  margin: 127px 0 0 4px;
+  width: min(100%, 524px);
+  aspect-ratio: 524 / 660;
+}
+.collagePhoto {
+  position: absolute;
+  background: #e6e6e2;
+  border: 5px solid white;
+  box-shadow: 1px 5px 13px #1227203d;
+  overflow: hidden;
+}
+.collagePhoto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collageAnastasiia {
+  left: 4%;
+  top: 2%;
+  width: 47%;
+  height: 49%;
+  transform: rotate(-7deg);
+}
+.collageAnastasiia img {
+  object-position: center 25%;
+}
+.collageDiagnostics {
+  right: 3%;
+  top: 1%;
+  width: 42%;
+  height: 39%;
+  transform: rotate(6deg);
+}
+.collageDiagnostics img {
+  object-position: 67% center;
+}
+.collageTeam {
+  left: 27%;
+  top: 24%;
+  width: 56%;
+  height: 42%;
+  z-index: 1;
+}
+.collageTeam img {
+  width: 50% !important;
+}
+.collageTeam img + img {
+  left: 50% !important;
+}
+.collageProcedure {
+  left: 4%;
+  bottom: 5%;
+  width: 47%;
+  height: 41%;
+  transform: rotate(-4deg);
+  z-index: 2;
+}
+.collageProcedure img {
+  object-position: 66% center;
+}
+.collageTetiana {
+  right: 0;
+  bottom: 1%;
+  width: 43%;
+  height: 41%;
+  z-index: 2;
+}
+.collageTetiana img {
+  object-position: center 20%;
+}
 
 @media (max-width: 1050px) {
-  .hero { min-height: 730px; }
-  .heroCopy { padding-top: 165px; padding-bottom: 95px; }
-  .heroActions { gap: 23px; }
-  .heroActions :global(.button) { min-width: 0; padding-inline: 25px; }
-  .heroCollage { margin-top: 148px; }
+  .hero {
+    min-height: 730px;
+  }
+  .heroCopy {
+    padding-top: 165px;
+    padding-bottom: 95px;
+  }
+  .heroActions {
+    gap: 23px;
+  }
+  .heroActions :global(.button) {
+    min-width: 0;
+    padding-inline: 25px;
+  }
+  .heroCollage {
+    margin-top: 148px;
+  }
 }
 @media (max-width: 850px) {
-  .heroGrid { gap: 28px; }
-  .heroActions :global(.button) { min-height: 54px; font-size: 12px; }
-  .heroWordmark span { font-size: 17px; }
+  .heroGrid {
+    gap: 28px;
+  }
+  .heroActions :global(.button) {
+    min-height: 54px;
+    font-size: 12px;
+  }
+  .heroWordmark span {
+    font-size: 17px;
+  }
 }
 @media (max-width: 700px) {
-  .hero { min-height: 0; background-image: url("/media/hero-mobile.webp"); background-position: center bottom; background-size: cover; }
-  .heroGrid { display: flex; flex-direction: column; align-items: center; gap: 0; text-align: center; padding-top: 89px; padding-bottom: 28px; }
-  .heroCopy { display: contents; }
-  .heroWordmark { justify-content: center; flex-direction: column; gap: 3px; align-items: center; min-height: 0; margin-bottom: 21px; }
-  .heroWordmark strong { font-size: 37px; }
-  .heroWordmark span { font-size: 16px; }
-  .hero h1 { margin-inline: auto; max-width: 420px; font-size: clamp(30px, 7.6vw, 42px); line-height: .92; }
-  .heroDescription { font-size: 15px; max-width: 450px; margin-inline: auto; }
-  .heroGrid :global(.gold-rule) { width: min(100%, 455px); margin-top: 12px; }
-  .heroActions { order: 2; margin-top: 12px; gap: 12px; }
-  .heroActions :global(.phone-button) { min-width: 64px; padding-inline: 15px; }
-  .heroCollage { margin: 11px 0 0; width: min(100%, 410px); aspect-ratio: 1.12; }
-  .collagePhoto { border-width: 3px; }
-  .collageAnastasiia { height: 55%; width: 41%; }
-  .collageDiagnostics { width: 38%; height: 42%; }
-  .collageTeam { height: 45%; top: 23%; left: 23%; width: 53%; }
-  .collageProcedure { height: 41%; width: 43%; left: 1%; }
-  .collageTetiana { height: 43%; width: 39%; }
+  .hero {
+    min-height: 0;
+    background-image: url('/media/hero-mobile.webp');
+    background-position: center bottom;
+    background-size: cover;
+  }
+  .heroGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+    padding-top: 89px;
+    padding-bottom: 28px;
+  }
+  .heroCopy {
+    display: contents;
+  }
+  .heroWordmark {
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    min-height: 0;
+    margin-bottom: 21px;
+  }
+  .heroWordmark strong {
+    font-size: 37px;
+  }
+  .heroWordmark span {
+    font-size: 16px;
+  }
+  .hero h1 {
+    margin-inline: auto;
+    max-width: 420px;
+    font-size: clamp(30px, 7.6vw, 42px);
+    line-height: 0.92;
+  }
+  .heroDescription {
+    font-size: 15px;
+    max-width: 450px;
+    margin-inline: auto;
+  }
+  .heroGrid :global(.gold-rule) {
+    width: min(100%, 455px);
+    margin-top: 12px;
+  }
+  .heroActions {
+    order: 2;
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .heroActions :global(.phone-button) {
+    min-width: 64px;
+    padding-inline: 15px;
+  }
+  .heroCollage {
+    margin: 11px 0 0;
+    width: min(100%, 410px);
+    aspect-ratio: 1.12;
+  }
+  .collagePhoto {
+    border-width: 3px;
+  }
+  .collageAnastasiia {
+    height: 55%;
+    width: 41%;
+  }
+  .collageDiagnostics {
+    width: 38%;
+    height: 42%;
+  }
+  .collageTeam {
+    height: 45%;
+    top: 23%;
+    left: 23%;
+    width: 53%;
+  }
+  .collageProcedure {
+    height: 41%;
+    width: 43%;
+    left: 1%;
+  }
+  .collageTetiana {
+    height: 43%;
+    width: 39%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .heroWordmark, .hero :global(.specialties), .heroActions, .collagePhoto {
-    animation: var(--reveal-keyframes) var(--entrance-duration, .52s) cubic-bezier(.2, .7, .25, 1) var(--entrance-delay, 0s) backwards;
+  .heroWordmark,
+  .hero :global(.specialties),
+  .heroActions,
+  .collagePhoto {
+    animation: var(--reveal-keyframes) var(--entrance-duration, 0.52s)
+      cubic-bezier(0.2, 0.7, 0.25, 1) var(--entrance-delay, 0s) backwards;
   }
-  .hero :global(.specialties) { --entrance-delay: .05s; }
-  .heroActions { --entrance-delay: .13s; }
-  .collagePhoto { --entrance-offset: 18px; --entrance-opacity: .22; --entrance-duration: .65s; }
-  .collageDiagnostics { --entrance-delay: .07s; }
-  .collageTeam { --entrance-delay: .14s; }
-  .collageProcedure { --entrance-delay: .19s; }
-  .collageTetiana { --entrance-delay: .25s; }
+  .hero :global(.specialties) {
+    --entrance-delay: 0.05s;
+  }
+  .heroActions {
+    --entrance-delay: 0.13s;
+  }
+  .collagePhoto {
+    --entrance-offset: 18px;
+    --entrance-opacity: 0.22;
+    --entrance-duration: 0.65s;
+  }
+  .collageDiagnostics {
+    --entrance-delay: 0.07s;
+  }
+  .collageTeam {
+    --entrance-delay: 0.14s;
+  }
+  .collageProcedure {
+    --entrance-delay: 0.19s;
+  }
+  .collageTetiana {
+    --entrance-delay: 0.25s;
+  }
 }

@@ -1,25 +1,95 @@
-.contentCard { display: flex; flex-direction: column; align-items: stretch; height: 100%; padding: 20px; border: 1px solid var(--paper); border-radius: 20px; background: white; box-shadow: 2px 4px 12px #51452b1a; text-align: center; }
-.contentCard h3 { font: 700 22px/1.14 var(--serif); margin: 8px 0 9px; }
-.contentCard p { font-size: 15px; line-height: 1.35; margin: 0 0 22px; }
-.contentCard .cardTitleLink img { width: 100%; height: auto; border-radius: 12px; }
-.cardTitleLink:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
-.contentCard .cardLink { display: block; margin-top: auto; border-radius: 50px; padding: 6px 10px; background: #759588; color: white; font-weight: 700; }
-.cardLink:hover { background: #577b6c; }
-.cardService { min-height: 346px; background: white url("/media/card-background.webp") center / cover no-repeat; }
-.cardService .cardTitleLink img { width: 100px; height: 100px; margin: 0 auto 27px; border-radius: 0; object-fit: contain; }
-.cardDoctor { min-height: 375px; }
-.cardBlog { min-height: 420px; }
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid var(--paper);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 2px 4px 12px #51452b1a;
+  text-align: center;
+}
+.contentCard h3 {
+  font: 700 22px/1.14 var(--serif);
+  margin: 8px 0 9px;
+}
+.contentCard p {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 0 0 22px;
+}
+.contentCard .cardTitleLink img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.cardTitleLink:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contentCard .cardLink {
+  display: block;
+  margin-top: auto;
+  border-radius: 50px;
+  padding: 6px 10px;
+  background: #759588;
+  color: white;
+  font-weight: 700;
+}
+.cardLink:hover {
+  background: #577b6c;
+}
+.cardService {
+  min-height: 346px;
+  background: white url('/media/card-background.webp') center / cover no-repeat;
+}
+.cardService .cardTitleLink img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 27px;
+  border-radius: 0;
+  object-fit: contain;
+}
+.cardDoctor {
+  min-height: 375px;
+}
+.cardBlog {
+  min-height: 420px;
+}
 @media (max-width: 850px) {
-  .contentCard { padding: 14px; }
+  .contentCard {
+    padding: 14px;
+  }
 }
 @media (max-width: 700px) {
-  .cardService, .cardDoctor, .cardBlog { min-height: 0; }
-  .cardService .cardTitleLink img { width: 78px; height: 78px; margin-bottom: 12px; }
-  .contentCard h3 { font-size: 19px; }
-  .contentCard p, .cardLink { font-size: 14px; }
+  .cardService,
+  .cardDoctor,
+  .cardBlog {
+    min-height: 0;
+  }
+  .cardService .cardTitleLink img {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 12px;
+  }
+  .contentCard h3 {
+    font-size: 19px;
+  }
+  .contentCard p,
+  .cardLink {
+    font-size: 14px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
-  .contentCard { transition: translate .22s ease, box-shadow .22s ease; }
-  .contentCard:hover { translate: 0 -2px; box-shadow: 2px 7px 16px #51452b26; }
+  .contentCard {
+    transition:
+      translate 0.22s ease,
+      box-shadow 0.22s ease;
+  }
+  .contentCard:hover {
+    translate: 0 -2px;
+    box-shadow: 2px 7px 16px #51452b26;
+  }
 }

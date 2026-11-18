@@ -23,7 +23,7 @@
 }
 
 .breadcrumbs > * + *::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -31,7 +31,7 @@
   border-right: 1px solid currentColor;
   border-top: 1px solid currentColor;
   rotate: 45deg;
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .breadcrumbs a:hover,
@@ -40,7 +40,7 @@
 .address:hover,
 .backLink:hover {
   text-decoration: underline;
-  text-underline-offset: .22em;
+  text-underline-offset: 0.22em;
 }
 
 .breadcrumbs [aria-current] {
@@ -66,7 +66,7 @@
 }
 
 .specialty::before {
-  content: "";
+  content: '';
   width: 19px;
   height: 1px;
   flex: 0 0 19px;
@@ -79,8 +79,8 @@
   color: var(--forest);
   font-size: clamp(53px, 6.1vw, 87px);
   font-weight: 600;
-  line-height: .96;
-  letter-spacing: -.03em;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -88,7 +88,7 @@
   display: block;
   margin-top: 9px;
   color: #536e61;
-  font-size: .55em;
+  font-size: 0.55em;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -125,7 +125,7 @@
 
 .downArrow::after,
 .externalArrow::after {
-  content: "";
+  content: '';
   display: block;
   width: 6px;
   height: 6px;
@@ -179,10 +179,10 @@
 }
 
 .sections a::after {
-  content: "↓";
+  content: '↓';
   color: #59786b;
   font-family: var(--navigation);
-  transition: translate .2s ease;
+  transition: translate 0.2s ease;
 }
 
 .sections a:hover::after {
@@ -224,7 +224,7 @@
 }
 
 .details li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 2px;
   top: 24px;
@@ -324,33 +324,86 @@
 }
 
 @media (max-width: 1050px) {
-  .hero { padding-top: 143px; }
-  .heroGrid { grid-template-columns: minmax(0, 1fr) minmax(0, 37%); gap: 35px; }
-  .name { font-size: clamp(45px, 7vw, 72px); }
+  .hero {
+    padding-top: 143px;
+  }
+  .heroGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 37%);
+    gap: 35px;
+  }
+  .name {
+    font-size: clamp(45px, 7vw, 72px);
+  }
 }
 
 @media (max-width: 700px) {
-  .hero { padding-top: 86px; }
-  .heroGrid { grid-template-columns: 1fr; gap: 26px; padding-block: 24px 30px; }
-  .intro { text-align: center; }
-  .specialty, .heroActions { justify-content: center; }
-  .specialty::before { display: none; }
-  .name { margin-block: 11px 14px; font-size: clamp(43px, 10vw, 64px); }
-  .approach { margin-inline: auto; }
-  .heroActions { gap: 6px 21px; margin-top: 18px; }
+  .hero {
+    padding-top: 86px;
+  }
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-block: 24px 30px;
+  }
+  .intro {
+    text-align: center;
+  }
+  .specialty,
+  .heroActions {
+    justify-content: center;
+  }
+  .specialty::before {
+    display: none;
+  }
+  .name {
+    margin-block: 11px 14px;
+    font-size: clamp(43px, 10vw, 64px);
+  }
+  .approach {
+    margin-inline: auto;
+  }
+  .heroActions {
+    gap: 6px 21px;
+    margin-top: 18px;
+  }
   .portrait {
     --photo-fade-left: 12%;
     justify-self: center;
     width: min(100%, 340px);
     aspect-ratio: 369 / 368;
   }
-  .sections { justify-content: center; column-gap: 20px; padding-block: 6px; }
-  .sections a { min-height: 40px; font-size: 13px; }
-  .details { grid-template-columns: 1fr; padding-block: 42px; }
-  .appointmentPanel { grid-template-columns: 1fr; }
-  .backLink { padding-bottom: 33px; }
+  .sections {
+    justify-content: center;
+    column-gap: 20px;
+    padding-block: 6px;
+  }
+  .sections a {
+    min-height: 40px;
+    font-size: 13px;
+  }
+  .details {
+    grid-template-columns: 1fr;
+    padding-block: 42px;
+  }
+  .appointmentPanel {
+    grid-template-columns: 1fr;
+  }
+  .backLink {
+    padding-bottom: 33px;
+  }
 }
 
-.serviceLinks { margin-top: 24px; }
-.serviceLinks ul { margin-top: 8px; }
-.serviceLinks a { display: inline-flex; align-items: center; min-height: 44px; color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.serviceLinks {
+  margin-top: 24px;
+}
+.serviceLinks ul {
+  margin-top: 8px;
+}
+.serviceLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

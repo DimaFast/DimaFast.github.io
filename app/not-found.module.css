@@ -1,2 +1,7 @@
-.errorPage { text-align: center; }
-.errorPage :global(.button-row) { justify-content: center; margin-top: 24px; }
+.errorPage {
+  text-align: center;
+}
+.errorPage :global(.button-row) {
+  justify-content: center;
+  margin-top: 24px;
+}

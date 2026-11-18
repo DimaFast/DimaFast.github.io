@@ -1,10 +1,10 @@
-import { Prices } from "@/components/prices";
-import { pageMetadata } from "@/lib/seo";
+import { Prices } from '@/components/prices'
+import { pageMetadata } from '@/lib/seo'
 
-const slug = "prices";
+const slug = 'prices'
 
-export const metadata = pageMetadata(slug);
+export const metadata = pageMetadata(slug)
 
 export default function Page() {
-  return <Prices />;
+  return <Prices />
 }

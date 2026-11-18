@@ -1,32 +1,95 @@
-.aboutSection { padding: 105px 0 55px; background: #eeeeeb url("/media/about-center.webp") center top / cover no-repeat; }
-.aboutSection:global(.standalone) { padding-top: 186px; }
-.aboutLayout { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: end; }
-.aboutCopy h1, .aboutCopy h2 { text-transform: uppercase; }
-.aboutCopy :global(.gold-rule) { margin: 17px 0; }
-.aboutCopy p { font-size: 17px; line-height: 1.4; }
-.aboutCopy p + p { margin-top: 18px; }
-.aboutCopy :global(.button-row) { margin-top: 24px; }
-.aboutCopy :global(.button) { min-height: 57px; }
+.aboutSection {
+  padding: 105px 0 55px;
+  background: #eeeeeb url('/media/about-center.webp') center top / cover no-repeat;
+}
+.aboutSection:global(.standalone) {
+  padding-top: 186px;
+}
+.aboutLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  align-items: end;
+}
+.aboutCopy h1,
+.aboutCopy h2 {
+  text-transform: uppercase;
+}
+.aboutCopy :global(.gold-rule) {
+  margin: 17px 0;
+}
+.aboutCopy p {
+  font-size: 17px;
+  line-height: 1.4;
+}
+.aboutCopy p + p {
+  margin-top: 18px;
+}
+.aboutCopy :global(.button-row) {
+  margin-top: 24px;
+}
+.aboutCopy :global(.button) {
+  min-height: 57px;
+}
 .aboutTeam {
   align-self: center;
   width: 100%;
   height: auto;
   border-radius: 16px;
 }
-.aboutFacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin: 54px 15px 0; }
-.aboutFacts article { padding: 20px; border-radius: 20px; background: var(--sand) url("/media/benefit-background.webp") center / cover no-repeat; box-shadow: 2px 4px 8px #51452b0e; }
-.aboutFacts h3 { font: 700 23px/1.16 var(--serif); margin-bottom: 9px; }
-.aboutFacts p { font-size: 15px; }
+.aboutFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin: 54px 15px 0;
+}
+.aboutFacts article {
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--sand) url('/media/benefit-background.webp') center / cover no-repeat;
+  box-shadow: 2px 4px 8px #51452b0e;
+}
+.aboutFacts h3 {
+  font: 700 23px/1.16 var(--serif);
+  margin-bottom: 9px;
+}
+.aboutFacts p {
+  font-size: 15px;
+}
 @media (max-width: 850px) {
-  .aboutLayout { gap: 28px; }
+  .aboutLayout {
+    gap: 28px;
+  }
 }
 @media (max-width: 700px) {
-  .aboutSection:global(.standalone) { padding-top: 105px; }
-  .aboutSection { padding: 48px 0 32px; background-image: url("/media/about-mobile.webp"); }
-  .aboutLayout { grid-template-columns: 1fr; }
-  .aboutLayout, .aboutCopy :global(.button-row) { text-align: center; justify-content: center; }
-  .aboutCopy p { font-size: 15px; }
-  .aboutCopy :global(.button) { min-height: 45px; }
-  .aboutTeam { width: min(100%, 420px); margin-inline: auto; }
-  .aboutFacts { grid-template-columns: 1fr; gap: 12px; margin: 25px 0 0; }
+  .aboutSection:global(.standalone) {
+    padding-top: 105px;
+  }
+  .aboutSection {
+    padding: 48px 0 32px;
+    background-image: url('/media/about-mobile.webp');
+  }
+  .aboutLayout {
+    grid-template-columns: 1fr;
+  }
+  .aboutLayout,
+  .aboutCopy :global(.button-row) {
+    text-align: center;
+    justify-content: center;
+  }
+  .aboutCopy p {
+    font-size: 15px;
+  }
+  .aboutCopy :global(.button) {
+    min-height: 45px;
+  }
+  .aboutTeam {
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+  .aboutFacts {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 25px 0 0;
+  }
 }

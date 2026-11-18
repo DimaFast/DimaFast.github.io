@@ -1,10 +1,10 @@
-import { Contacts } from "@/components/contacts";
-import { pageMetadata } from "@/lib/seo";
+import { Contacts } from '@/components/contacts'
+import { pageMetadata } from '@/lib/seo'
 
-const slug = "contacts";
+const slug = 'contacts'
 
-export const metadata = pageMetadata(slug);
+export const metadata = pageMetadata(slug)
 
 export default function Page() {
-  return <Contacts standalone />;
+  return <Contacts standalone />
 }

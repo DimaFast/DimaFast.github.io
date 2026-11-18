@@ -1,12 +1,41 @@
-.form { display: grid; gap: 14px; align-content: start; }
-.form input:not([type="hidden"]), .form textarea { border: 0; border-bottom: 1px solid #222; padding: 12px 0; background: transparent; color: var(--ink); width: 100%; min-width: 0; border-radius: 0; font: 400 14px/1.5 var(--navigation); }
-.form textarea { resize: vertical; min-height: 104px; }
-.form .submit { justify-self: start; min-height: 43px; min-width: 163px; }
-.form .method, .form .status { font-size: 13px; color: var(--green); margin: 0; }
-.status:empty { display: none; }
+.form {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+.form input:not([type='hidden']),
+.form textarea {
+  border: 0;
+  border-bottom: 1px solid #222;
+  padding: 12px 0;
+  background: transparent;
+  color: var(--ink);
+  width: 100%;
+  min-width: 0;
+  border-radius: 0;
+  font: 400 14px/1.5 var(--navigation);
+}
+.form textarea {
+  resize: vertical;
+  min-height: 104px;
+}
+.form .submit {
+  justify-self: start;
+  min-height: 43px;
+  min-width: 163px;
+}
+.form .method,
+.form .status {
+  font-size: 13px;
+  color: var(--green);
+  margin: 0;
+}
+.status:empty {
+  display: none;
+}
 
-.form input[aria-invalid="true"],
-.form textarea[aria-invalid="true"] {
+.form input[aria-invalid='true'],
+.form textarea[aria-invalid='true'] {
   border-color: #9e302a;
 }
 
