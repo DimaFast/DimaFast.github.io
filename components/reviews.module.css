@@ -1,0 +1,13 @@
+.reviewsSection { padding-bottom: 34px; }
+.reviewsSection h2 { text-align: center; text-transform: uppercase; }
+.reviewsLayout { display: grid; grid-template-columns: 1fr 2.13fr; gap: 28px; align-items: start; margin-top: 48px; }
+.reviewsLayout > div:first-child > :global(.button) { margin-top: 23px; }
+.reviewCard { height: 100%; display: flex; flex-direction: column; align-items: flex-start; padding: 20px; border-radius: 18px; border: 1px solid #e2ebe2; background: #e7ece7 url("/media/review-background.webp") center / cover no-repeat; }
+.reviewCard figcaption { color: var(--green); font: 700 23px/1.1 var(--serif); }
+.reviewCard blockquote { font-size: 15px; margin: 10px 0 15px; }
+.reviewCard img { margin-top: auto; }
+@media (max-width: 700px) {
+  .reviewsSection { padding-bottom: 47px; }
+  .reviewsLayout { grid-template-columns: 1fr; margin-top: 20px; gap: 25px; }
+  .reviewsLayout > div:first-child { text-align: center; }
+}

@@ -1,0 +1,36 @@
+.carousel { position: relative; margin-top: 42px; padding-bottom: 25px; }
+.carouselViewport { --slides: 4; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carouselViewport.carouselReady { overflow: clip; scroll-snap-type: none; }
+.carouselTrack { display: flex; padding-block: 2px 11px; touch-action: pan-y pinch-zoom; }
+.carouselViewport:not(.carouselReady) .carouselTrack { touch-action: auto; }
+.carouselViewport::-webkit-scrollbar { display: none; }
+.carouselSlide { flex: 0 0 calc(100% / var(--slides)); min-width: 0; padding: 0 15px; scroll-snap-align: start; }
+.carouselArrow { position: absolute; top: calc(50% - 31px); z-index: 1; display: grid; place-items: center; width: 33px; height: 39px; padding: 0 0 4px; border: 0; border-radius: 50%; color: var(--green); background: #fffdfade; font: 35px/.8 var(--serif); }
+.carouselPrev { left: -22px; }
+.carouselNext { right: -22px; }
+.carouselDots { position: absolute; bottom: -5px; inset-inline: 0; display: flex; justify-content: center; }
+.carouselDots button { display: grid; place-items: center; width: 24px; height: 24px; border: 0; padding: 0; background: transparent; }
+.carouselDots button::before { content: ""; width: 11px; height: 11px; border: 1px solid #ffffffc4; border-radius: 50%; background: #56726d; }
+.carouselDots button[aria-current]::before { background: var(--green); }
+.carouselReviews { margin-top: 0; }
+.carouselReviews .carouselViewport { --slides: 2; }
+
+@media (max-width: 1050px) {
+  .carouselViewport { --slides: 3; }
+}
+@media (max-width: 700px) {
+  .carousel { margin-top: 25px; }
+  .carouselViewport { --slides: 2; }
+  .carouselSlide { padding-inline: 7px; }
+  .carouselPrev { left: -16px; }
+  .carouselNext { right: -16px; }
+  .carouselReviews { margin-top: 0; }
+}
+@media (max-width: 410px) {
+  .carouselViewport, .carouselReviews .carouselViewport { --slides: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .carouselDots button::before { transition: background-color .2s ease, scale .2s ease; }
+  .carouselDots button[aria-current]::before { scale: 1.15; }
+}

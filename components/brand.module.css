@@ -1,0 +1,18 @@
+.brand { display: inline-flex; align-items: center; gap: 9px; color: var(--green); flex-shrink: 0; }
+.brand img { width: 54px; height: 54px; object-fit: contain; }
+.brand span { display: grid; line-height: 1; }
+.brand strong { font: 700 24px/.95 var(--serif); text-transform: uppercase; letter-spacing: .045em; }
+.brand small { font-size: 9px; font-weight: 700; letter-spacing: .095em; text-transform: uppercase; margin-top: 4px; }
+.brandFooter { justify-self: center; align-self: center; flex-direction: column; gap: 9px; text-align: center; }
+.brandFooter img { width: 96px; height: 96px; }
+.brandFooter strong { font-size: 30px; }
+.brandFooter small { font-size: 11px; }
+@media (max-width: 850px) {
+  .brand strong { font-size: 21px; }
+  .brand small { font-size: 8px; }
+  .brand img { width: 44px; height: 44px; }
+}
+@media (max-width: 700px) {
+  .brandFooter { grid-column: 1 / -1; }
+  .brandFooter img { width: 70px; height: 70px; }
+}

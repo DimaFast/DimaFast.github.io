@@ -1,0 +1,13 @@
+:global(.inner-content) > .prose > :global(.section-heading) { margin-bottom: 34px; }
+.prose { font-size: 17px; }
+.prose h2, .prose h3 { font: 700 23px/1.2 var(--sans); margin: 23px 0 12px; }
+.prose p { margin-bottom: 16px; white-space: pre-line; }
+.prose li + li { margin-top: 8px; }
+.innerActions { margin-top: 28px; }
+.editorialPage .prose { display: flow-root; }
+.editorialPage :global(.section-heading) { display: block; text-align: left; text-transform: none; }
+.editorialPage :global(.section-heading)::before, .editorialPage :global(.section-heading)::after { display: none; }
+.editorialImage { float: right; margin: 0 0 18px 24px; border-radius: 5px; width: min(40%, 300px); height: auto; }
+@media (max-width: 700px) {
+  .prose { font-size: 15px; }
+}
