@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
+.sites-runtime/
+public/media/responsive/
+content/responsive-images.generated.json
+content/responsive-images.generated.json.*.tmp
+
+.idea/
