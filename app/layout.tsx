@@ -8,6 +8,7 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   applicationName: site.name,
+  verification: { google: 'dGlAc8P63Ob6eXY1Nh8ZgU1ZOThDHKnWHCIT5zHrUns' },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
